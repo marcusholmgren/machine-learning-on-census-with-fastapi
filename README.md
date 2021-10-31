@@ -42,6 +42,26 @@ Tell dvc to use the AWS profile named udacity, instead of the default profile.
 dvc remote modify storage profile udacity
 ```
 
+Run the `clean_data.py` script 
+```
+dvc run -n clean_data -d starter/data/census.csv -d starter/starter/clean_data.py -o starter/data/census_clean.csv --no-exec python starter/starter/clean_data.py
+```
+
+Producec a pipleine with one step
+```
++-----------------------------+  
+| starter/data/census.csv.dvc |  
++-----------------------------+  
+                *                
+                *                
+                *                
+        +------------+           
+        | clean_data |           
+        +------------+   
+```
+
+DVC pipeline can be run with `dvc repro` command.
+
 # Model
 * Using the starter code, write a machine learning model that trains on the clean data and saves the model. Complete any function that has been started.
 * Write unit tests for at least 3 functions in the model code.
