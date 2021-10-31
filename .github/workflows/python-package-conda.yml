@@ -5,10 +5,7 @@ on: [push]
 jobs:
   build-linux:
     runs-on: ubuntu-latest
-    # These permissions are needed to interact with GitHub's OIDC Token endpoint.
-    permissions:
-      id-token: write
-      contents: read
+    environment: production
     strategy:
       max-parallel: 5
 #    env:
