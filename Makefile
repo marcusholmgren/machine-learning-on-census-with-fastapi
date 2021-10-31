@@ -4,6 +4,7 @@ help:
 		@echo "Please use 'make <target>' where <target> is one of"
 		@echo ""
 		@echo "  setup       create python virtual environment"
+		@echo "  install     install or update python virtual environment"
 		@echo "  lint        lint code"
 		@echo "  test        run all the tests"
 		@echo "  all         runs both lint and test commands"
@@ -13,6 +14,9 @@ help:
 setup:
 	conda env create --file starter/environment.yml
 	conda activate ml_census_fastapi
+
+install:
+	conda env update --file starter/environment.yml --name ml_census_fastap
 
 test:
 	pytest -vv -p no:logging

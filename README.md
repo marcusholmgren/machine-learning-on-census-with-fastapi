@@ -1,3 +1,5 @@
+[![Python Package using Conda](https://github.com/marcusholmgren/machine-learning-on-census-with-fastapi/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/marcusholmgren/machine-learning-on-census-with-fastapi/actions/workflows/python-package-conda.yml)
+
 Working in a command line environment is recommended for ease of use with git and dvc. If on Windows, WSL1 or 2 is recommended.
 
 # Environment Set up
@@ -19,6 +21,11 @@ Working in a command line environment is recommended for ease of use with git an
 * This data is messy, try to open it in pandas and see what you get.
 * To clean it, use your favorite text editor to remove all spaces.
 * Commit this modified data to dvc (we often want to keep the raw data untouched but then can keep updating the cooked version).
+
+Initialize and start using [dvc](https://dvc.org/) inside git repository.
+```
+dvc init
+```
 
 # Model
 * Using the starter code, write a machine learning model that trains on the clean data and saves the model. Complete any function that has been started.
