@@ -7,6 +7,7 @@ help:
 		@echo "  install     install or update python virtual environment"
 		@echo "  lint        lint code"
 		@echo "  test        run all the tests"
+		@echo "  dvc-repro   run dvc pull and repro commands"
 		@echo "  all         runs both lint and test commands"
 		@echo ""
 		@echo "Check the Makefile to know exactly what each target is doing."
@@ -24,5 +25,9 @@ test:
 lint:
 	flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
 	flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+dvc-repro:
+	dvc pull
+	dvc repro
 
 all: lint test

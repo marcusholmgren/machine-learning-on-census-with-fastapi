@@ -38,4 +38,5 @@ jobs:
     - uses: iterative/setup-dvc@v1
     - name: DVC
       run: |
+        dvc pull -v
         dvc repro
