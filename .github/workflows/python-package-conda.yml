@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 5
-    env:
-      working-dir: ./starter
+#    env:
+#      working-dir: ./starter
 
     steps:
     - uses: actions/checkout@v2
@@ -33,13 +33,16 @@ jobs:
         secret: ${{ secrets.AWS_ACCESS_SECRET }}
         profile: udacity
         region:  us-east-1
+    - name: AWS configure list
+      run: |
+        aws configure list
     - name: Add conda to system path
       run: |
         # $CONDA is an environment variable pointing to the root of the miniconda directory
         echo $CONDA/bin >> $GITHUB_PATH
     - name: Install dependencies
       run: |
-        conda env update --file environment.yml --name base
+        conda env update --file starter/environment.yml --name base
       working-directory: ${{ env.working-dir }}
     - name: Lint with flake8
       run: |
