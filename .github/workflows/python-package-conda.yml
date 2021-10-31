@@ -35,3 +35,7 @@ jobs:
       run: |
         # conda install pytest
         pytest
+    - uses: iterative/setup-dvc@v1
+    - name: DVC
+      run: |
+        dvc repro
