@@ -30,8 +30,8 @@ jobs:
     - name: Create AWS profile
       uses: Fooji/create-aws-profile-action@v1
       with:
-        key: ${{ secrets.AWS_ACCESS_KEY }}
-        secret: ${{ secrets.AWS_ACCESS_SECRET }}
+        key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         profile: udacity
         region:  us-east-1
     - name: AWS configure list
