@@ -7,7 +7,7 @@ from starter.main import app
 
 @pytest.fixture(scope="module")
 def clean_data_df():
-    return pd.read_csv('./starter/data/census_clean.csv', nrows=100)
+    return pd.read_csv('./starter/data/census_clean_test.csv', nrows=100)
 
 
 @pytest.fixture(scope="module")
