@@ -8,7 +8,7 @@ The project uses DVC to manage the project dependencies and allow for a reproduc
 ## Tech Stack
 
 [Python](https://www.python.org), [DVC](https://dvc.org), [scikit-learn](https://scikit-learn.org/stable/), 
-[pandas](https://scikit-learn.org/stable/), [FastAPU](https://fastapi.tiangolo.com) and [Conda](https://docs.conda.io/en/latest/)
+[pandas](https://scikit-learn.org/stable/), [FastAPI](https://fastapi.tiangolo.com) and [Conda](https://docs.conda.io/en/latest/)
 
 
 ## DVC Dag
